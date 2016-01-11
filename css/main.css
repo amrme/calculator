@@ -1,9 +1,11 @@
-.background {
+html {
   background-color: #f3f3f3;
-  width: 100%; }
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 #display {
-  margin-top: 50px;
   height: 100px;
   background-color: #b3ffb3; }
 
