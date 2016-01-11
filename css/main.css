@@ -7,7 +7,16 @@ html {
 #display {
   height: 150px;
   background: grey;
-  background: linear-gradient(black, grey); }
+  background: linear-gradient(black, grey);
+  position: relative; }
+  #display #result {
+    color: white;
+    margin-right: 20px;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    font-size: 3.5em;
+    font-family: sans-serif; }
 
 .calculator-body {
   background-color: #dadada; }
