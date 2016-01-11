@@ -5,30 +5,21 @@ html {
   background-size: cover; }
 
 #display {
-  height: 100px;
+  height: 150px;
   background-color: #b3ffb3; }
 
 .calculator-body {
   background-color: #dadada; }
 
-.row-buttons {
-  padding-bottom: 20px; }
-  .row-buttons .btn {
-    margin-bottom: -20px;
-    padding-top: 25px;
-    padding-bottom: 20px; }
-  .row-buttons img {
-    margin-bottom: -20px;
-    padding-top: 25px;
-    padding-bottom: 5px; }
-    .row-buttons img:hover {
-      transition: all 0.5s ease;
-      background-color: gold; }
-
 .operation-row {
-  background-color: white;
-  margin-left: 0.5%;
-  margin-right: 0.5%; }
+  background-color: black;
+  color: white;
+  margin-left: 0;
+  margin-right: 0; }
+  .operation-row .operation-btn {
+    font-weight: bolder; }
+    .operation-row .operation-btn:hover {
+      color: orange; }
   .operation-row #clear-btn {
     background-color: orange;
     border-radius: 0;
@@ -37,7 +28,30 @@ html {
     padding-top: 25px;
     padding-bottom: 20px;
     text-align: center; }
-  .operation-row .operation-btn {
+
+.row-buttons {
+  padding-bottom: 20px; }
+
+.special-row {
+  padding-bottom: 0; }
+  .special-row .btn {
+    margin-bottom: -20px;
+    padding-top: 25px;
+    padding-bottom: 20px;
     font-weight: bolder; }
-    .operation-row .operation-btn:hover {
+  .special-row .operation-btn {
+    font-weight: bolder; }
+    .special-row .operation-btn:hover {
       color: orange; }
+  .special-row .img-effect img {
+    margin-bottom: -20px;
+    padding-top: 25px;
+    padding-bottom: 5px; }
+  .special-row .img-effect:hover img {
+    transition: all 0.5s ease;
+    transform: scale(1.2); }
+  .special-row .special-effect {
+    background-color: black;
+    width: 20%;
+    color: white;
+    height: 80px; }

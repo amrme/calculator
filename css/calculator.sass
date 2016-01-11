@@ -10,30 +10,19 @@ html
 
 // display style
 #display
-  height: 100px
+  height: 150px
   background-color: lighten(green, 60%)
 
 .calculator-body
   background-color: $calculatorBG
 
-
-.row-buttons
-  padding-bottom: 20px
-  .btn
-    margin-bottom: -20px
-    padding-top: 25px
-    padding-bottom: 20px
-  img
-    margin-bottom: -20px
-    padding-top: 25px
-    padding-bottom: 5px
-    &:hover
-      transition: all 0.5s ease
-      background-color: gold
 .operation-row
-  background-color: white
-  margin-left: 0.5%
-  margin-right: 0.5%
+  background-color: black
+  color: white
+  margin-left: 0
+  margin-right: 0
+  .operation-btn
+    +operation-effect
 
   // style clear button
   #clear-btn
@@ -44,7 +33,32 @@ html
     padding-top: 25px
     padding-bottom: 20px
     text-align: center
-  .operation-btn
+.row-buttons
+  padding-bottom: 20px
+.special-row
+  padding-bottom: 0
+
+
+  .btn
+    margin-bottom: -20px
+    padding-top: 25px
+    padding-bottom: 20px
     font-weight: bolder
+
+  .operation-btn
+    +operation-effect
+
+  .img-effect
+    img
+      margin-bottom: -20px
+      padding-top: 25px
+      padding-bottom: 5px
     &:hover
-      color: orange
+      img
+        transition: all 0.5s ease
+        transform: scale(1.2)
+  .special-effect
+    background-color: black
+    width: 20%
+    color: white
+    height: 80px
