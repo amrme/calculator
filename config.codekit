@@ -7,7 +7,7 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 2,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/calculator.sass",
 		"outputAbbreviatedPath": "\/css\/calculator.css",
@@ -17,6 +17,15 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": false
+		},
+	"\/css\/main.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/main.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/css\/main.sass": {
 		"createSourceMap": 0,
@@ -39,7 +48,7 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 2,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/mixins.sass",
 		"outputAbbreviatedPath": "\/css\/mixins.css",
@@ -55,7 +64,7 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 2,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/variables.sass",
 		"outputAbbreviatedPath": "\/css\/variables.css",
@@ -107,7 +116,7 @@
 	"bowerAbbreviatedPath": "",
 	"displayValue": "calculator",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "pencil_darkGray"
+	"iconImageName": "meme-lotr"
 	},
 "projectSettings": {
 	"alwaysUseExternalServer": 0,
