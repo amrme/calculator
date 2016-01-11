@@ -1,5 +1,4 @@
 html {
-  background-color: #f3f3f3;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,7 +11,15 @@ html {
 .calculator-body {
   background-color: #dadada; }
 
-.row-buttons {
-  margin-top: 1%;
-  padding-left: 4px;
-  padding-right: 4px; }
+.operation-row {
+  background-color: white;
+  margin-left: 0.5%;
+  margin-right: 0.5%; }
+  .operation-row #clear-btn {
+    background-color: orange;
+    border-radius: 0;
+    margin-left: -15px; }
+  .operation-row .operation-btn {
+    font-weight: bolder; }
+    .operation-row .operation-btn:hover {
+      color: orange; }

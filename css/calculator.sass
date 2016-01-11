@@ -1,6 +1,5 @@
 
 html
-  background-color: $fadedSilver
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
@@ -17,7 +16,19 @@ html
 .calculator-body
   background-color: $calculatorBG
 
+
 .row-buttons
-  margin-top: 1%
-  padding-left: 4px
-  padding-right: 4px
+.operation-row
+  background-color: white
+  margin-left: 0.5%
+  margin-right: 0.5%
+
+  // style clear button
+  #clear-btn
+    background-color: orange
+    border-radius: 0
+    margin-left: -15px
+  .operation-btn
+    font-weight: bolder
+    &:hover
+      color: orange

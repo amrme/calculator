@@ -21,21 +21,21 @@ html( lang="en" )
                 #display
               .row.calculator-body
                 // buttons
-                .row.row-buttons
+                .row.row-buttons.operation-row
                   // first row
                   .col-xs-3
                     // reset button
-                    .button(type="button", class="btn btn-warning", name="button") Clear
+                    .button(type="button", class="btn", id="clear-btn", name="button") Clear
                   .col-xs-3
                     // devision button
-                    .button(type="button", class="btn ", name="button") &radic;
+                    .button(type="button", class="btn operation-btn", name="button") &radic;
                   .col-xs-3
                     // square button
-                    .button(type="button", class="btn ", name="button") x
+                    .button(type="button", class="btn operation-btn", name="button") x
                       sup  2
                   .col-xs-3
                     // division button
-                    .button(type="button", class="btn ", name="button") /             
+                    .button(type="button", class="btn operation-btn", name="button") /             
           
                 .row.row-buttons
                   // second row
