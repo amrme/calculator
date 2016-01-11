@@ -6,7 +6,8 @@ html {
 
 #display {
   height: 150px;
-  background: linear-gradient(black, #666666); }
+  background: grey;
+  background: linear-gradient(black, grey); }
 
 .calculator-body {
   background-color: #dadada; }
