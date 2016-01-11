@@ -13,12 +13,34 @@ html( lang="en" )
     body(style="padding-bottom:10rem;")
         .container.background
           .row
-            .col-md-4.col-sm-2.col-xs-12
-            .col-md-4.col-sm-8.col-xs-12
+            .col-md-4.col-sm-2.col-xs-1
+            .col-md-4.col-sm-8.col-xs-10
               // put calculator here
-              h1 hello there
+              .row 
+                //screen
+                #display
+              .row.calculator-body
+                // buttons
+                .row.row-buttons
+                  // first row
+                  .col-xs-3
+                    // reset button
+                    .button(type="button", class="btn btn-warning", name="button") Clear
+                  .col-xs-3
+                    // reset button
+                    .button(type="button", class="btn ", name="button") &radic;
+                  .col-xs-3
+                    // reset button
+                    .button(type="button", class="btn ", name="button") X <sup> 2</sup>
+                    
+                  .col-xs-3
+                    // reset button
+                    .button(type="button", class="btn ", name="button") / 
+                     
+                     
+                    
               
               
-            .col-md-4.col-sm-2.col-xs-12
+            .col-md-4.col-sm-2.col-xs-1
         script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
         script( src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' )
