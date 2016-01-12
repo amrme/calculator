@@ -17,20 +17,34 @@ $("document").ready(function() {
   });
   // plus
   $("#add").click(function(){
-    operation = "+";
-    // post result
-    result = current + prev;
+    if(operation == null)
+    {
+      operation = "+";
+      prev = current;
+      current = 0;
+    }
 
-    $("#result").html(result);
-    prev = result;
-    current = 0;
   });
+
+
   // equals
   $("#equals").click(function(){
     // post result
     switch (operation) {
       case '+':
         result = prev + current;
+        operation = null;
+        break;
+      case '-':
+        result = prev - current;
+        operation = null;
+        break;
+      case 'x':
+        result = prev * current;
+        operation = null;
+        break;
+      case '/':
+        result = prev / current;
         operation = null;
         break;
 
