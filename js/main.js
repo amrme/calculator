@@ -30,15 +30,19 @@ $("document").ready(function() {
       if (Number($current))
       {
         //console.log("it's a number", Number($current));
+        // put it in the display
+        $("#result").html($current);
+        // push item to result
+        result.push($current);
       }
       // not a number
       else {
         // console.log("NaN");
+        // push item to result
+        result.push($current);
       }
-      // put it in the display
-      $("#result").html($current);
-      // push item to result
-      result.push($current);
+
+
       //console.log($(this).html());
     }
   });
