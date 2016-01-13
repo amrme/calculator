@@ -4,20 +4,15 @@ var result = [];
 
 $("document").ready(function() {
 
-  // if tesult has 3 elements evaluate
-  if(result.length === 3)
-  {
-    // evaluate the result and post it to the display
-    evaluate();
-  }
-
+  // check if any button is clicked
   $(".btn").click(function() {
 
     // get element's value from it's html tag
     var $current = $(this).html();
 
     // if you already have pending operations
-    if (result.length === 3)
+    // and it's not just a new number that has to be concatenated
+    if (result.length === 3 && !Number($current))
     {
       // check what was clicked after the operation
       // if it was equals
@@ -44,6 +39,7 @@ $("document").ready(function() {
       {
         //console.log("it's a number", Number($current));
         // if it's a number then if the value before it was a number concatenate them
+        console.log(result[result.length - 1]);
         if (Number(result[result.length - 1]))
         {
           result[result.length - 1] += $current;
