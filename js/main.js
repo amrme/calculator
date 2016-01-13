@@ -12,7 +12,7 @@ $("document").ready(function() {
 
     // if you already have pending operations
     // and it's not just a new number that has to be concatenated
-    if (result.length === 3 && !Number($current))
+    if (result.length === 3 && !Number($current) && $current !== '.')
     {
       // check what was clicked after the operation
       // if it was equals
@@ -64,11 +64,24 @@ $("document").ready(function() {
           result = [];
           $("#result").html("0");
         }
+        // else push some normal arthemitic operations to result
         else
         {
-
-          // push item to result
-          result.push($current);
+          //console.log("hello", $current);
+          // if it's a dot concatenate
+          // if ($current === '.')
+          // {
+          //    console.log("it's a dot");
+          //   result[result.length - 1] += $current;
+          //   $("#result").html(result[result.length - 1]);
+          //   //console.log($current);
+          // }
+          // else it's a normal arthmetic operation +, -, *, or /
+          // else
+          // {
+            // push item to result
+            result.push($current);
+          // }
         }
       }
 
