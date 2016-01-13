@@ -87,14 +87,25 @@ $("document").ready(function() {
 function evaluate() {
   // debug
   console.log(result);
-  // store the result of the calculations here
-  var currentResult = eval(result.join(''));
-  // put result on display
-  $("#result").html(currentResult);
-  // remove the 2nd and 3rd items from result array
-  result.splice(1,2);
-  // replace the first element with the reuslt of the previous calculation
-  result[0] = currentResult;
-
+  // validate the equation first
+  if (Number(result[0]) && Number(result[2]) && !Number(result[1]))
+  {
+    // store the result of the calculations here
+    var currentResult = eval(result.join(''));
+    // put result on display
+    $("#result").html(currentResult);
+    // remove the 2nd and 3rd items from result array
+    result.splice(1,2);
+    // replace the first element with the reuslt of the previous calculation
+    result[0] = currentResult;
+  }
+  // else erase everything and put an error
+  else
+  {
+    // erase everything
+    result = [];
+    // throw an error on the display
+    $("#result").html("Invalid");
+  }
   //console.log(result.join(""), result.length);
 }
