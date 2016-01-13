@@ -12,17 +12,30 @@ $("document").ready(function() {
   }
 
   $(".btn").click(function() {
+
+    // get element's value from it's html tag
+    var $current = $(this).html();
+
     // if you already have pending operations
     if (result.length === 3)
     {
-      // evaluate the result and post it to the display
-      evaluate();
+      // check what was clicked after the operation
+      // if it was equals
+      if ($current === "=")
+      {
+        // evaluate the result and post it to the display
+        evaluate();
+      }
+      // if it was another operation, then save it
+      else
+      {
+        evaluate();
+        result.push($current);
+      }
     }
     // if not start a new one
     else
     {
-      // get element's value from it's html tag
-      var $current = $(this).html();
 
       // validate the current elemnt
 
@@ -60,6 +73,8 @@ $("document").ready(function() {
 
 // evaluates the calculations
 function evaluate() {
+  // debug
+  console.log(result);
   // store the result of the calculations here
   var currentResult = eval(result.join(''));
   // put result on display
