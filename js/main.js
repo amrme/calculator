@@ -43,10 +43,21 @@ $("document").ready(function() {
       if (Number($current))
       {
         //console.log("it's a number", Number($current));
-        // put it in the display
-        $("#result").html($current);
-        // push item to result
-        result.push($current);
+        // if it's a number then if the value before it was a number concatenate them
+        if (Number(result[result.length - 1]))
+        {
+          result[result.length - 1] += $current;
+          // put it in the display
+          $("#result").html(result[result.length - 1]);
+        }
+        // else push to the stack
+        else
+        {
+          // push item to result
+          result.push($current);
+          // put it in the display
+          $("#result").html($current);
+        }
       }
       // not a number
       else
@@ -59,6 +70,7 @@ $("document").ready(function() {
         }
         else
         {
+
           // push item to result
           result.push($current);
         }
