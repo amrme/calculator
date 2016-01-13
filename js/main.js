@@ -22,9 +22,23 @@ $("document").ready(function() {
     else
     {
       // get element's value from it's html tag
-      $("#result").html($(this).html());
+      var $current = $(this).html();
+
+      // validate the current elemnt
+
+      // it's a number
+      if (Number($current))
+      {
+        //console.log("it's a number", Number($current));
+      }
+      // not a number
+      else {
+        // console.log("NaN");
+      }
+      // put it in the display
+      $("#result").html($current);
       // push item to result
-      result.push($(this).html());
+      result.push($current);
       //console.log($(this).html());
     }
   });
