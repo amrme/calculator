@@ -36,10 +36,19 @@ $("document").ready(function() {
         result.push($current);
       }
       // not a number
-      else {
-        // console.log("NaN");
-        // push item to result
-        result.push($current);
+      else
+      {
+        // check if it's clear
+        if ($current === "CLR")
+        {
+          result = [];
+          $("#result").html("0");
+        }
+        else
+        {
+          // push item to result
+          result.push($current);
+        }
       }
 
 
