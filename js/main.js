@@ -15,7 +15,7 @@ $("document").ready(function() {
 
     // if you already have pending operations
     // and it's not just a new number that has to be concatenated
-    if (result.length === 3 && (!Number($current)) && ($current !== '0'))
+    if (result.length === 3 && (!Number($current)) && ($current !== '0') && ('.'.charCodeAt(0) !== $current.charCodeAt(0)))
     {
       // check what was clicked after the operation
       // if it was equals
@@ -74,6 +74,13 @@ $("document").ready(function() {
           result = [];
           result.push(Math.pow(result[0], 2));
           $("#result").html(result[0]);
+        }
+        // if it was . then concatenate it
+        else if ('.'.charCodeAt(0) === $current.charCodeAt(0)) {
+          // concatenate
+          console.log("it's a dot");
+          result[result.length - 1] = String(result[result.length - 1]).trim() + '.';
+          $('#result').html(result[result.length - 1]);
         }
         // else push some normal arthemitic operations to result
         else
