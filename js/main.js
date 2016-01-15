@@ -96,7 +96,7 @@ function evaluate() {
   if (Number(result[0]) && Number(result[2]) && !Number(result[1]))
   {
     // store the result of the calculations here
-    var currentResult = eval(result.join(''));
+    var currentResult = eval(result.join('')).toFixed(2);
     // put result on display
     $("#result").html(currentResult);
     // remove the 2nd and 3rd items from result array
