@@ -12,7 +12,7 @@ $("document").ready(function() {
 
     // if you already have pending operations
     // and it's not just a new number that has to be concatenated
-    if (result.length === 3 && !Number($current) && $current !== '.')
+    if (result.length === 3 && !Number($current))
     {
       // check what was clicked after the operation
       // if it was equals
@@ -31,7 +31,6 @@ $("document").ready(function() {
     // if not start a new one
     else
     {
-
       // validate the current elemnt
 
       // it's a number
@@ -58,35 +57,27 @@ $("document").ready(function() {
       // not a number
       else
       {
+        // console.log($current);
         // check if it's clear
         if ($current === "CLR")
         {
           result = [];
           $("#result").html("0");
         }
+        // if it was squared
+        else if ($current === "x<sup> 2</sup>")
+        {
+          result = [];
+          result.push(Math.pow(result[0], 2));
+          $("#result").html(result[0]);
+        }
         // else push some normal arthemitic operations to result
         else
         {
-          //console.log("hello", $current);
-          // if it's a dot concatenate
-          // if ($current === '.')
-          // {
-          //    console.log("it's a dot");
-          //   result[result.length - 1] += $current;
-          //   $("#result").html(result[result.length - 1]);
-          //   //console.log($current);
-          // }
-          // else it's a normal arthmetic operation +, -, *, or /
-          // else
-          // {
-            // push item to result
-            result.push($current);
-          // }
+          // push item to result
+          result.push($current);
         }
       }
-
-
-      //console.log($(this).html());
     }
   });
 
@@ -97,6 +88,7 @@ function evaluate() {
   // debug
   console.log(result);
   // validate the equation first
+  // if the first and last elements are numbers and the middle element is an operator
   if (Number(result[0]) && Number(result[2]) && !Number(result[1]))
   {
     // store the result of the calculations here
