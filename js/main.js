@@ -15,7 +15,7 @@ $("document").ready(function() {
 
     // if you already have pending operations
     // and it's not just a new number that has to be concatenated
-    if (result.length === 3 && (!Number($current)))
+    if (result.length === 3 && (!Number($current)) && ($current !== '0'))
     {
       // check what was clicked after the operation
       // if it was equals
@@ -37,7 +37,7 @@ $("document").ready(function() {
       // validate the current elemnt
 
       // it's a number
-      if (Number($current))
+      if (Number($current) || ($current === '0'))
       {
         //console.log("it's a number", Number($current));
         // if it's a number then if the value before it was a number concatenate them
