@@ -7,12 +7,15 @@ $("document").ready(function() {
   // check if any button is clicked
   $(".btn").click(function() {
 
+    // debug
+    console.log($(this).html());
+
     // get element's value from it's html tag
     var $current = $(this).html();
 
     // if you already have pending operations
     // and it's not just a new number that has to be concatenated
-    if (result.length === 3 && !Number($current))
+    if (result.length === 3 && (!Number($current)))
     {
       // check what was clicked after the operation
       // if it was equals
@@ -38,12 +41,13 @@ $("document").ready(function() {
       {
         //console.log("it's a number", Number($current));
         // if it's a number then if the value before it was a number concatenate them
-        console.log(result[result.length - 1]);
+        // console.log(result[result.length - 1]);
         if (Number(result[result.length - 1]))
         {
-          result[result.length - 1] += $current;
+          result[result.length - 1] = String(result[result.length - 1]).trim() + String($current).trim();
           // put it in the display
           $("#result").html(result[result.length - 1]);
+          console.log(result);
         }
         // else push to the stack
         else
