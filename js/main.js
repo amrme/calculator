@@ -15,7 +15,7 @@ $("document").ready(function() {
 
     // if you already have pending operations
     // and it's not just a new number that has to be concatenated
-    if (result.length === 3 && (!Number($current)) && ($current !== '0') && ('.'.charCodeAt(0) !== $current.charCodeAt(0)) && ($current !== "x<sup> 2</sup>"))
+    if (result.length === 3 && (!Number($current)) && ($current !== '0') && ('.'.charCodeAt(0) !== $current.charCodeAt(0)) && ($current !== "x<sup> 2</sup>") && ($current !== '√'))
     {
       // check what was clicked after the operation
       // if it was equals
@@ -72,14 +72,18 @@ $("document").ready(function() {
         {
           result[0] = (Math.pow(result[result.length - 1], 2));
           $("#result").html(result);
-          console.log(result);
         }
         // if it was . then concatenate it
         else if ('.'.charCodeAt(0) === $current.charCodeAt(0)) {
           // concatenate
-          console.log("it's a dot");
+          //console.log("it's a dot");
           result[result.length - 1] = String(result[result.length - 1]).trim() + '.';
           $('#result').html(result[result.length - 1]);
+        }
+        // if it was sqrt
+        else if ($current === '√') {
+          result[0] = (Math.pow(result[result.length - 1], 1/2));
+          $("#result").html(result);
         }
         // else push some normal arthemitic operations to result
         else
