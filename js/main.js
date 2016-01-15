@@ -15,7 +15,7 @@ $("document").ready(function() {
 
     // if you already have pending operations
     // and it's not just a new number that has to be concatenated
-    if (result.length === 3 && (!Number($current)) && ($current !== '0') && ('.'.charCodeAt(0) !== $current.charCodeAt(0)))
+    if (result.length === 3 && (!Number($current)) && ($current !== '0') && ('.'.charCodeAt(0) !== $current.charCodeAt(0)) && ($current !== "x<sup> 2</sup>"))
     {
       // check what was clicked after the operation
       // if it was equals
@@ -61,7 +61,6 @@ $("document").ready(function() {
       // not a number
       else
       {
-        // console.log($current);
         // check if it's clear
         if ($current === "CLR")
         {
@@ -71,9 +70,9 @@ $("document").ready(function() {
         // if it was squared
         else if ($current === "x<sup> 2</sup>")
         {
-          result = [];
-          result.push(Math.pow(result[0], 2));
-          $("#result").html(result[0]);
+          result[0] = (Math.pow(result[result.length - 1], 2));
+          $("#result").html(result);
+          console.log(result);
         }
         // if it was . then concatenate it
         else if ('.'.charCodeAt(0) === $current.charCodeAt(0)) {
